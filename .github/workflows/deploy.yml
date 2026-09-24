@@ -26,13 +26,13 @@ jobs:
       - name: Deploy to server
         uses: appleboy/ssh-action@v1
         with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
+          host: 31.56.189.105
+          username: root
+          key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHLDXTm5ZVsiklscAFSkdG43fVm2lhgXofxYxBI/2pWM my-server
           port: 22
           script: |
             set -e
-            cd ${{ secrets.SERVER_PATH }}
+            cd /opt/max-bot
             git pull origin main
             cd bot
             npm ci --production
