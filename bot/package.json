@@ -1,0 +1,20 @@
+{
+  "name": "max-lottery-bot",
+  "version": "1.0.0",
+  "description": "Bot for Max messenger: group lottery with number booking and SBP payment",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-cron": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
